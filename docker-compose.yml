@@ -9,7 +9,7 @@ services:
       - .env
     environment:
       GATEWAY_PORT: "8080"
-      IDENTITY_SERVICE_URL: "${IDENTITY_DOCKER_SERVICE_URL:-http://host.docker.internal:8081}"
+      IDENTITY_SERVICE_URL: "${IDENTITY_SERVICE_URL:-http://host.docker.internal:8081}"
     ports:
       - "${GATEWAY_PORT:-8080}:8080"
     extra_hosts:
